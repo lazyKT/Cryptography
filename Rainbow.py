@@ -4,6 +4,12 @@ from hashlib import md5
 
 
 class Rainbow:
+    """
+    # Simplified Rainbow Table.
+    # What're the differences with the real rainbow tables?
+    # This class doesn't handle collision,
+    # This class doesn't accept sepcific number of hash prefix
+    """
 
     passwords = list()
     rainbow = dict()
@@ -297,7 +303,7 @@ def main():
         if pre_image:
             print(info_prefix, 'Hash Value Found with Pre-Image :', pre_image)
         else:
-            print(info_prefix, 'Finished Searching in all chains.') 
+            print(info_prefix, 'Finished Searching in all chains.')
             print(info_prefix, 'Unable to find hash value :', _h)
     else:
         print (info_prefix, 'Unable to find hash value :', _h)
