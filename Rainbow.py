@@ -184,8 +184,9 @@ class Rainbow:
     def reduct(cls, h: bytes, n: int) -> int:
         """
         Simple reduction function.
-        In real world, we would take the specific number of prefix characters from hash.
-        However, in this script, reduction function takes whole hash value.
+        In real world, we would take the specific number of prefix characters from hash
+        and there will be more than one reduction functions to handle collisions.
+        However, in this script, reduction function emphasizes the simplicity and takes whole hash value.
         """
         r = int.from_bytes(h, byteorder='big')
         return (r%n) + 1
